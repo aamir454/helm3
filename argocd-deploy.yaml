@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: wp2
+  name: wp3
   namespace: argocd
 spec:
   project: default
@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/aamir454/helm3.git
     targetRevision: HEAD
-    path: wp2
+    path: wp3
   destination: 
     server: https://kubernetes.default.svc
     namespace: nswordpress
