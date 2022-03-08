@@ -80,7 +80,7 @@ externalDatabase:
   password:
 
   ## Database name
-  database: bitnami_phpbb
+  database: phpbb-db
 
 ##
 ## MariaDB chart configuration
