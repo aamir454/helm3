@@ -43,49 +43,21 @@ spec:
         - name: ALLOW_EMPTY_PASSWORD
           value: {{ .Values.allowEmptyPassword | quote }}
         - name: MARIADB_HOST
-        {{- if .Values.mariadb.enabled }}
-          value: {{ template "phpbb.mariadb.fullname" . }}
-        {{- else }}
-          value: {{ .Values.externalDatabase.host | quote }}
-        {{- end }}
+          value: mariadb.nsmysql
         - name: MARIADB_PORT_NUMBER
-        {{- if .Values.mariadb.enabled }}
           value: "3306"
-        {{- else }}
-          value: {{ .Values.externalDatabase.port | quote }}
-        {{- end }}
         - name: PHPBB_DATABASE_NAME
-        {{- if .Values.mariadb.enabled }}
-          value: {{ .Values.mariadb.db.name | quote }}
-        {{- else }}
-          value: {{ .Values.externalDatabase.database | quote }}
-        {{- end }}
+          value: phpbb-db
         - name: PHPBB_DATABASE_USER
-        {{- if .Values.mariadb.enabled }}
-          value: {{ .Values.mariadb.db.user | quote }}
-        {{- else }}
-          value: {{ .Values.externalDatabase.user | quote }}
-        {{- end }}
+          value: root
         - name: PHPBB_DATABASE_PASSWORD
-          valueFrom:
-            secretKeyRef:
-            {{- if .Values.mariadb.enabled }}
-              name: {{ template "phpbb.mariadb.fullname" . }}
-              key: mariadb-password
-            {{- else }}
-              name: {{ printf "%s-%s" .Release.Name "externaldb" }}
-              key: db-password
-            {{- end }}
+          value: Aamir@1122
         - name: PHPBB_USERNAME
-          value: {{ .Values.phpbbUser | quote }}
+          value: admin
         - name: PHPBB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: "{{ template "phpbb.fullname" . }}"
-              key: phpbb-password
+          value: Aamir@1122
         - name: PHPBB_EMAIL
-          value: {{ .Values.phpbbEmail | quote }}
-        {{- if .Values.smtpHost }}
+          value: aamir454@gmail.com
         - name: SMTP_HOST
           value: {{ .Values.smtpHost | quote }}
         {{- end }}
@@ -99,12 +71,7 @@ spec:
         {{- end }}
         {{- if .Values.smtpPassword }}
         - name: SMTP_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: "{{ template "phpbb.fullname" . }}"
-              key: smtp-password
-        {{- end }}
-        {{- if .Values.smtpProtocol }}
+          value: password
         - name: SMTP_PROTOCOL
           value: {{ default "" .Values.smtpProtocol | quote }}
         {{- end }}
