@@ -11,6 +11,22 @@
 ## Bitnami WordPress image version
 ## ref: https://hub.docker.com/r/bitnami/wordpress/tags/
 ##
+istio:
+  envoyfilter:
+    enabled: false
+
+  virtualservice:
+    enabled: true
+    host: wp1.fiberdoctor.pk
+    http:
+    - match:
+      - uri:
+          prefix: /service
+      route:
+      - destination:
+          host: wp2
+          port:
+            number: 80
 image:
   registry: docker.io
   repository: bitnami/wordpress
