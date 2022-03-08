@@ -41,40 +41,25 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
         env:
         - name: ALLOW_EMPTY_PASSWORD
-          value: {{ .Values.allowEmptyPassword | quote }}
+          value: "yes"
         - name: MARIADB_HOST
-          value: mariadb.nsmysql
+          value: "mariadb.nsmysql"
         - name: MARIADB_PORT_NUMBER
           value: "3306"
         - name: PHPBB_DATABASE_NAME
-          value: phpbb-db
+          value: "phpbb-db"
         - name: PHPBB_DATABASE_USER
-          value: root
+          value: "root"
         - name: PHPBB_DATABASE_PASSWORD
-          value: Aamir@1122
+          value: "Aamir@1122"
         - name: PHPBB_USERNAME
-          value: admin
+          value: "admin"
         - name: PHPBB_PASSWORD
-          value: Aamir@1122
+          value: "Aamir@1122"
         - name: PHPBB_EMAIL
-          value: aamir454@gmail.com
+          value: "aamir454@gmail.com"
         - name: SMTP_HOST
           value: {{ .Values.smtpHost | quote }}
-        {{- end }}
-        {{- if .Values.smtpPort }}
-        - name: SMTP_PORT
-          value: {{ .Values.smtpPort | quote }}
-        {{- end }}
-        {{- if .Values.smtpUser }}
-        - name: SMTP_USER
-          value: {{ .Values.smtpUser | quote }}
-        {{- end }}
-        {{- if .Values.smtpPassword }}
-        - name: SMTP_PASSWORD
-          value: password
-        - name: SMTP_PROTOCOL
-          value: {{ default "" .Values.smtpProtocol | quote }}
-        {{- end }}
         ports:
         - name: http
           containerPort: 80
