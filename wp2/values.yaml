@@ -17,11 +17,11 @@ istio:
 
   virtualservice:
     enabled: true
-    host: wp1.fiberdoctor.pk
+    host: wp2.fiberdoctor.pk
     http:
     - match:
       - uri:
-          prefix: /service
+          prefix: /
       route:
       - destination:
           host: wp2
