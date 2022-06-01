@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Kiali | helm-charts</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Kiali" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Helm Charts used to install Kiali resources." />
+<meta property="og:description" content="Helm Charts used to install Kiali resources." />
+<link rel="canonical" href="https://kiali.org/helm-charts/" />
+<meta property="og:url" content="https://kiali.org/helm-charts/" />
+<meta property="og:site_name" content="helm-charts" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Kiali" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Helm Charts used to install Kiali resources.","headline":"Kiali","name":"helm-charts","url":"https://kiali.org/helm-charts/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/helm-charts/assets/css/style.css?v=e1bb6c322af14587f98b05516b5d9cb87780ade4">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/helm-charts/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://kiali.org/helm-charts/">helm-charts</a></h1>
+      
+
+      <h1 id="kiali">Kiali</h1>
+
+<p>For getting started with Kiali, see:</p>
+
+<ul>
+  <li><a href="https://kiali.io/docs/installation/quick-start/">Quick Start</a></li>
+  <li><a href="https://kiali.io/docs/installation/installation-guide/">Installation Guide</a></li>
+</ul>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/kiali/helm-charts/edit/master/docs/index.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
