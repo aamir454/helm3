@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: postgres-simple
+  name: pgadmin
   namespace: argocd
 spec:
   project: default
@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: https://github.com/aamir454/helm3.git
     targetRevision: HEAD
-    path: postgresql
+    path: pgadmin
   destination: 
     server: https://kubernetes.default.svc
-    namespace: postgres-simple
+    namespace: dev-postgres
 
   syncPolicy:
     syncOptions:
