@@ -10,9 +10,17 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
+env:
+  - name: VARIABLE_1
+    value: "false"
+  - name: DATABASE_VARIABLE
+    value: "postgres://openproject:openproject@postgres.namespace/openproject"
+  - name: HOSTNAME_VARIABLE
+    value: "test.com"
+
 imagePullSecrets: []
-nameOverride: "new4"
-fullnameOverride: "new4"
+nameOverride: ""
+fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
